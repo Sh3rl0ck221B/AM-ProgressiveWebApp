@@ -1,0 +1,59 @@
+<script>
+  /**
+   * Listen to scroll to change header opacity class
+   */
+  function checkScroll(){
+    var startY = $('.navbar').height() * 2; //The point where the navbar changes in px
+
+    if($(window).scrollTop() > startY){
+      $('.navbar').addClass("scrolled");
+    }else{
+      $('.navbar').removeClass("scrolled");
+    }
+  }
+
+  if($('.navbar').length > 0){
+    $(window).on("scroll load resize", function(){
+      checkScroll();
+    });
+  }
+</script>
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg dark">
+    <a class="navbar-brand dark" routerLink="">Automobile Meyer</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse dark" id="navbarNavDropdown">
+      <ul class="navbar-nav m-auto">
+        <li class="nav-item mx-4">
+          <a class="nav-link dark" routerLink="">Ankauf</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link dark" routerLink="vehicles">Fahrzeuge</a>
+        </li>
+        <li class="nav-item mx-4">
+          <a class="nav-link dark" routerLink="">Ersatzteile & Zubehör</a>
+        </li>
+        <li class="nav-item mx-4 ">
+          <a class="nav-link dark" routerLink="">Reifen & Felgen</a>
+        </li>
+        <li class="nav-item mx-4 ">
+          <a class="nav-link dark" routerLink="">Service</a>
+        </li>
+        <li class="nav-item dropdown mx-4 ">
+          <a class="nav-link dropdown-toggle dark" routerLink="#" id="navbarDropdownMenuLink2" role="button" data-toggle="dropdown"
+             aria-haspopup="true" aria-expanded="false">
+            Unternehmen
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" routerLink="">Action</a>
+            <a class="dropdown-item" routerLink="">Another action</a>
+            <a class="dropdown-item" routerLink="">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
