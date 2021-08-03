@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <div class="row">
+  <div class="col-12 background ">
+  <h1 class="display-3 mt-5 p-5 dark text-center">Fahrzeuge</h1>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-12 my-5" align="center">
+      <a routerLink="/advertisement"><button type="button" class="btn btn-light">Neues Inserat</button></a>
+    </div>
+  </div>
+  <app-vehicle-list [vehicleList]="vehicleList"></app-vehicle-list>
+</div>
