@@ -4,7 +4,7 @@
       <div class="card-header">
         <div class="row">
           <div class="col-9" align="left">
-            <app-vehicle-name [vehicle]="vehicle"></app-vehicle-name>
+            {{vehicle.manufacturer}} {{vehicle.model}}
           </div>
           <div class="col-3" align="right">
             <button type="button" class="btn btn-dark m-1 ">Details</button>
@@ -13,7 +13,7 @@
       </div>
       <div class="card-body row" align="left">
         <div class="col-lg-4">
-          <app-vehicle-carousel [images]="vehicle.images"></app-vehicle-carousel>
+          <!--<app-vehicle-carousel [images]="vehicle.images"></app-vehicle-carousel>-->
         </div>
         <div class="col-lg-8">
           <div class="card-body">
@@ -26,7 +26,7 @@
                 <p></p>
               </div>
               <div class="col p-3 border-bottom">
-                <app-vehicle-price [price]="vehicle.price"></app-vehicle-price>
+                <h3> vehicleprice €</h3>
               </div>
             </div>
           </div>

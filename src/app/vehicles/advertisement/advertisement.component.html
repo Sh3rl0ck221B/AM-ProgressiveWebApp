@@ -27,84 +27,20 @@
           <input name="mileage" id="mileage" class="form-control"  #mileage/>
         </div>
       </div>
-      <div class="col-6">
-        <div class="form-group">
-          <label for="initialRegistration" class="dark">Erstzulassung:</label>
-          <input name="initialRegistration" id="initialRegistration" class="form-control"  #initialRegistration/>
-        </div>
-      </div>
-    </div>
-    <div class="row m-auto">
-      <div class="col-6">
-        <div class="form-group">
-          <label for="enginePower" class="dark">Motorleistung:</label>
-          <input name="enginePower" id="enginePower" class="form-control"  #enginePowerKW/>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <label for="fuelType" class="dark">Krafstoffart:</label>
-          <input name="fuelType" id="fuelType" class="form-control" #fuelType/>
-        </div>
-      </div>
-    </div>
-    <div class="row m-auto">
-      <div class="col-6">
-        <div class="form-group">
-          <label for="nextTechnicalExamination" class="dark">Tüv bis:</label>
-          <input name="nextTechnicalExamination" id="nextTechnicalExamination" class="form-control" #nextTechnicalExamination/>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <label for="fuelConsumption" class="dark">Verbrauch:</label>
-          <input name="fuelConsumption" id="fuelConsumption" class="form-control" #fuelConsumption/>
-        </div>
-      </div>
-    </div>
-    <div class="row m-auto">
-      <div class="col-6">
-        <div class="form-group">
-          <label for="emissionStandard" class="dark">Abgasnorm:</label>
-          <input name="emissionStandard" id="emissionStandard" class="form-control" #emissionStandard/>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <label for="gearType" class="dark">Getriebeart:</label>
-          <input name="gearType" id="gearType" class="form-control" #gearType/>
-        </div>
-      </div>
-    </div>
-    <div class="row m-auto">
-      <div class="col-6">
-        <div class="form-group">
-          <label for="price" class="dark">Preis:</label>
-          <input name="price" id="price" class="form-control" #price/>
-        </div>
-      </div>
-      <div class="col-6">
-        <div class="form-group">
-          <label for="price" class="dark">Fahrzeughalter:</label>
-          <input name="numberOfVehicleHolders" id="numberOfVehicleHolders" class="form-control" #numberOfVehicleHolders/>
-        </div>
-      </div>
     </div>
   </div>
     <div class="row">
       <div class="col-9">
       </div>
       <div class="col-3 p-5">
-        <button (click)="addvehicle(manufacturer, model, mileage, initialRegistration, enginePowerKW, price,
-        fuelType, gearType, nextTechnicalExamination, fuelConsumption,
-        emissionStandard, numberOfVehicleHolders)" class="btn btn-light">
+        <button (click)="addvehicle(manufacturer, model, mileage)" class="btn btn-light">
           Inserat erstellen
         </button>
       </div>
     </div>
   </form>
 </div>
-<app-vehicle-list [vehicleList]="vehicles"></app-vehicle-list>
+<app-vehicle-list></app-vehicle-list>
 
 
 

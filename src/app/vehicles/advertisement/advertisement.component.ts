@@ -2,25 +2,28 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Vehicle} from '../vehicle.model';
 import {newArray} from '@angular/compiler/src/util';
 import {VehiclesModule} from '../vehicles.module';
+import {VehicleService} from '../vehicle.service';
 
 @Component({
   selector: 'app-advertisement',
   templateUrl: './advertisement.component.html',
   styleUrls: ['./advertisement.component.scss']
 })
-export class AdvertisementComponent{
-  @Input() vehicles: Vehicle[];
+export class AdvertisementComponent implements OnInit{
 
+  vehicleList: Array<Vehicle> = [];
 
-  addvehicle(manufacturer: HTMLInputElement, model: HTMLInputElement, mileAge: HTMLInputElement,
-             firstRegistration: HTMLInputElement, powerInKW: HTMLInputElement, price: HTMLInputElement,
-             typeOfFuel: HTMLInputElement, gearType: HTMLInputElement, nextTechnicalExamination?: HTMLInputElement,
-             consumptionPerHundredKilometer?: HTMLInputElement, environmentalBadge?: HTMLInputElement,
-             numberOfVehicleHolders?: HTMLInputElement): boolean {
-    this.vehicles.push(new Vehicle(manufacturer.value, model.value, mileAge.value, firstRegistration.value, powerInKW.value, price.value,
-      typeOfFuel.value, gearType.value, nextTechnicalExamination.value, consumptionPerHundredKilometer.value,
-      environmentalBadge.value, numberOfVehicleHolders.value));
+  constructor(private vehicleService: VehicleService) {
+  }
+
+  addvehicle(manufacturer: HTMLInputElement, model: HTMLInputElement, mileAge: HTMLInputElement): boolean {
+    this.vehicleService.createVehicle(new Vehicle('3', manufacturer.value, model.value, mileAge.value));
+    this.vehicleService.getVehicleList();
     return false;
+  }
+
+  ngOnInit(): void {
+    this.vehicleList = this.vehicleService.getVehicleList();
   }
 
 }
