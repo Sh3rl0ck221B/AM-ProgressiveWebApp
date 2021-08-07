@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Vehicle} from '../vehicle.model';
+import {VehicleService} from '../vehicle.service';
 
 @Component({
   selector: 'app-vehicle-item',
@@ -8,4 +9,11 @@ import {Vehicle} from '../vehicle.model';
 })
 export class VehicleItemComponent{
   @Input() vehicle: Vehicle;
+
+  constructor(private vehicleService: VehicleService){
+  }
+
+  deleteVehicle(id: string): void{
+    this.vehicleService.deleteVehicle(id);
+  }
 }
