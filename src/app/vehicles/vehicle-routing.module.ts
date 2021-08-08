@@ -1,10 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {VehicleComponent} from './vehicle.component';
+import {FormdataVehicleConditionComponent} from './formdata-vehicle-condition/formdata-vehicle-condition.component';
+import {FormdataBasicComponent} from './formdata-basic/formdata-basic.component';
 
 
 const routes: Routes = [
-  {path: 'vehicles', component: VehicleComponent},
+  {path: 'vehicles', component: VehicleComponent,
+  children: [
+    {path: 'vehicleBasicData', component: FormdataBasicComponent},
+    {path: 'vehicleCondition', component: FormdataVehicleConditionComponent},
+  ]
+  },
 ];
 
 @NgModule({

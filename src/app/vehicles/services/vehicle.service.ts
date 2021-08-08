@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import {Vehicle} from '../models/vehicle.model';
+import {VehicleBasicData} from '../models/vehicle-basic-data.model';
+import {VehicleConditionData} from '../models/vehicle-condition-data.model';
 
 @Injectable({
   providedIn: 'root'
@@ -7,11 +9,7 @@ import {Vehicle} from '../models/vehicle.model';
 export class VehicleService {
 
 
-  vehicleList: Array<Vehicle> = [
-    new Vehicle('1', 'VW', 'T5', '120000'),
-    new Vehicle('2', 'Nissan', 'Micra', '77000'),
-    new Vehicle('3', 'Porsche', 'Cayenne', '66000')
-  ];
+  vehicleList: Array<Vehicle> = [];
 
   constructor() { }
 

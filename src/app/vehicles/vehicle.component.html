@@ -6,62 +6,16 @@
   </div>
   <div class="row">
     <div class="col-12 my-5" align="center">
-      <button type="button" (click)="showModal=true" data-toggle="modal" data-target="#exampleModal" class="btn btn-light">Neues Inserat</button>
+      <button type="button"  (click)="showModal=true"  routerLink="vehicleBasicData" class="btn btn-light"
+      data-toggle="modal" data-target="#myModal">Neues Inserat</button>
     </div>
   </div>
   <app-vehicle-list></app-vehicle-list>
 </div>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
-
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" [ngClass]="{'show':showModal}">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" (click)="showModal=false"  data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <form>
-          <div class="form-group container mt-5">
-            <div class="row m-auto">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="manufacturer" class="dark">Hersteller:</label>
-                  <input name="manufacturer" id="manufacturer" class="form-control" #manufacturer/>
-                </div>
-              </div>
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="modell" class="dark">Modell:</label>
-                  <input name="model" id="modell" class="form-control" #model/>
-                </div>
-              </div>
-            </div>
-            <div class="row m-auto">
-              <div class="col-6">
-                <div class="form-group">
-                  <label for="mileage" class="dark">Laufleistung:</label>
-                  <input name="mileage" id="mileage" class="form-control" #mileage/>
-                </div>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button (click)="addvehicle(manufacturer, model, mileage);showModal = false" data-dismiss="modal" class="btn btn-dark">
-          Inserat erstellen
-        </button>
-      </div>
-    </div>
+<div class="modal" id="myModal" [ngClass]="{'show': showModal}" role="dialog">
+  <div class="modal-dialog" role="form">
+    <router-outlet></router-outlet>
   </div>
 </div>
-
-

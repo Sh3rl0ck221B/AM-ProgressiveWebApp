@@ -15,12 +15,6 @@ export class VehicleComponent implements OnInit {
   constructor(private vehicleService: VehicleService) {
   }
 
-  addvehicle(manufacturer: HTMLInputElement, model: HTMLInputElement, mileAge: HTMLInputElement): boolean {
-    this.vehicleService.createVehicle(new Vehicle('3', manufacturer.value, model.value, mileAge.value));
-    this.vehicleService.getVehicleList();
-    return false;
-  }
-
   ngOnInit(): void {
     this.vehicleList = this.vehicleService.getVehicleList();
   }

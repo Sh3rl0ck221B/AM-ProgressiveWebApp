@@ -1,15 +1,15 @@
+import {VehicleBasicData} from './vehicle-basic-data.model';
+import {VehicleConditionData} from './vehicle-condition-data.model';
+
 export class Vehicle {
 
   id: string;
-  manufacturer: string;
-  model: string;
-  mileAge: string;
+  vehicleBasicData: VehicleBasicData;
+  vehicleConditionData: VehicleConditionData;
 
-
-  constructor(id: string, manufacturer: string, model: string, mileAge: string) {
+  constructor(id: string, vehicleBasicData: VehicleBasicData, vehicleConditionData: VehicleConditionData) {
     this.id = id;
-    this.manufacturer = manufacturer;
-    this.model = model;
-    this.mileAge = mileAge;
+    this.vehicleBasicData = vehicleBasicData;
+    this.vehicleConditionData = vehicleConditionData;
   }
 }
