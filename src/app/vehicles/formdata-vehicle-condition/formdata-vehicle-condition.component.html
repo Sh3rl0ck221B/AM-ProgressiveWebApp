@@ -1,0 +1,27 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+    <button type="button" routerLink="" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group container mt-5">
+        <div class="row m-auto">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="mileage" class="dark">Laufleistung:</label>
+              <input name="mileage" id="mileage" class="form-control" #mileage/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button routerLink="../vehicleBasicData">Zurück</button>
+    <button routerLink="../" (click)="submit()">Erstellen</button>
+  </div>
+</div>
+
