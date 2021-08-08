@@ -18,7 +18,11 @@ export class FormDataService {
   }
 
   postData(): void{
-    const vehicle = new Vehicle('4', this.vehicleBasicData, this.vehicleConditionData);
-    this.vehicleService.createVehicle(vehicle);
+    const vehicleBasicData = new VehicleBasicData();
+    vehicleBasicData.manufacturers = this.vehicleBasicData.manufacturers;
+    vehicleBasicData.models = this.vehicleBasicData.models;
+    const vehicleConditionData = new VehicleConditionData();
+    vehicleConditionData.mileages = this.vehicleConditionData.mileages;
+    this.vehicleService.createVehicle(new Vehicle('4', vehicleBasicData, vehicleConditionData));
   }
 }

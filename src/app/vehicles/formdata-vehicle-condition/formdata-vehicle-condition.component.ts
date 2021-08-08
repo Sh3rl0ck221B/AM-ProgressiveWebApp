@@ -9,17 +9,13 @@ import {VehicleConditionData} from '../models/vehicle-condition-data.model';
   templateUrl: './formdata-vehicle-condition.component.html',
   styleUrls: ['./formdata-vehicle-condition.component.scss']
 })
-export class FormdataVehicleConditionComponent implements OnInit {
+export class FormdataVehicleConditionComponent{
 
   vehicleConditionData: VehicleConditionData;
-
 
   constructor(private vehicleService: VehicleService,
               private formDataService: FormDataService) {
     this.vehicleConditionData = formDataService.vehicleConditionData;
-  }
-
-  ngOnInit(): void {
   }
 
   submit(): void {
