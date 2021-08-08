@@ -12,7 +12,13 @@
           <div class="col-6">
             <div class="form-group">
               <label for="mileage" class="dark">Laufleistung:</label>
-              <input name="mileage" id="mileage" class="form-control" [(ngModel)]="vehicleConditionData.mileages"/>
+              <input name="mileage" id="mileage" class="form-control" [(ngModel)]="vehicleConditionData.mileage"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="vehicleOwner" class="dark">Fahrzeughalter:</label>
+              <input name="vehicleOwner" id="vehicleOwner" class="form-control" [(ngModel)]="vehicleConditionData.vehicleOwner"/>
             </div>
           </div>
         </div>
@@ -24,4 +30,6 @@
     <button routerLink="../" (click)="submit()">Erstellen</button>
   </div>
 </div>
+
+<!-- fahrzeughalter bauhjahr -->
 

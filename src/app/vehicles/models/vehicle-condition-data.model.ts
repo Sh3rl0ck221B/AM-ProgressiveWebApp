@@ -1,12 +1,21 @@
 export class VehicleConditionData {
-  private mileage: number;
+  private _mileage: number;
+  private _vehicleOwner: number;
 
 
-  get mileages(): number {
-    return this.mileage;
+  get mileage(): number {
+    return this._mileage;
   }
 
-  set mileages(value: number) {
-    this.mileage = value;
+  set mileage(value: number) {
+    this._mileage = value;
+  }
+
+  get vehicleOwner(): number {
+    return this._vehicleOwner;
+  }
+
+  set vehicleOwner(value: number) {
+    this._vehicleOwner = value;
   }
 }

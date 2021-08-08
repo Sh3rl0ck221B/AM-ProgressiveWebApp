@@ -21,8 +21,11 @@ export class FormDataService {
     const vehicleBasicData = new VehicleBasicData();
     vehicleBasicData.manufacturers = this.vehicleBasicData.manufacturers;
     vehicleBasicData.models = this.vehicleBasicData.models;
+    vehicleBasicData.yearOfManufacture = this.vehicleBasicData.yearOfManufacture;
+    vehicleBasicData.price = this.vehicleBasicData.price;
     const vehicleConditionData = new VehicleConditionData();
-    vehicleConditionData.mileages = this.vehicleConditionData.mileages;
+    vehicleConditionData.mileage = this.vehicleConditionData.mileage;
+    vehicleConditionData.vehicleOwner = this.vehicleConditionData.vehicleOwner;
     this.vehicleService.createVehicle(new Vehicle('4', vehicleBasicData, vehicleConditionData));
   }
 }

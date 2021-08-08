@@ -13,13 +13,25 @@
             <div class="form-group">
               <label for="manufacturer" class="dark">Hersteller:</label>
               <input name="manufacturer" id="manufacturer" class="form-control"
-                     [(ngModel)]="vehicleBasicData.manufacturers"/>
+                     [(ngModel)]="vehicleBasicData.manufacturer"/>
             </div>
           </div>
           <div class="col-6">
             <div class="form-group">
-              <label for="modell">Modell:</label>
-              <input name="model" id="modell" class="form-control" [(ngModel)]="vehicleBasicData.models"/>
+              <label for="model">Modell:</label>
+              <input name="model" id="model" class="form-control" [(ngModel)]="vehicleBasicData.model"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="price">Preis:</label>
+              <input name="model" id="price" class="form-control" [(ngModel)]="vehicleBasicData.price"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="yearOfManufacture">Baujahr:</label>
+              <input name="model" id="yearOfManufacture" class="form-control" [(ngModel)]="vehicleBasicData.yearOfManufacture"/>
             </div>
           </div>
         </div>
@@ -31,3 +43,4 @@
     <button routerLink="../vehicleCondition">Nächste Seite</button>
   </div>
 </div>
+
