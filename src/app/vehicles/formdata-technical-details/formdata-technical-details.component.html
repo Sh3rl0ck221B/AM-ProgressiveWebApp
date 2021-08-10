@@ -1,4 +1,54 @@
-<p>formdata-technical-details works!</p>
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title">Modal title</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group container mt-5">
+        <div class="row m-auto">
+          <div class="col-6">
+            <div class="form-group">
+              <label for="fuel" class="dark">Kraftstoff:</label>
+              <input name="fuel" id="fuel" class="form-control"
+                     [(ngModel)]="vehicleTechnicalData.typeOfFuel"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="power">KW:</label>
+              <input name="power" id="power" class="form-control" [(ngModel)]="vehicleTechnicalData.power"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="gearType">Getriebe:</label>
+              <input name="gearType" id="gearType" class="form-control" [(ngModel)]="vehicleTechnicalData.gearType"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="consumption">Verbrauch:</label>
+              <input name="consumption" id="consumption" class="form-control" [(ngModel)]="vehicleTechnicalData.consumption"/>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="environmental-badge">Umweltplakette:</label>
+              <input name="environmental-badge" id="environmental-badge" class="form-control" [(ngModel)]="vehicleTechnicalData.environmentalBadge"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button routerLink="">Abbrechen</button>
+    <button routerLink="../vehicleCondition">Nächste Seite</button>
+  </div>
+</div>
 
 
 <!-- vehicle power in kw , type of fuel , geartype

@@ -34,13 +34,19 @@
               <input name="model" id="yearOfManufacture" class="form-control" [(ngModel)]="vehicleBasicData.yearOfManufacture"/>
             </div>
           </div>
+          <div class="col-6">
+            <div class="form-group">
+              <label for="firstRegistration">Erstzulassung:</label>
+              <input name="model" id="firstRegistration" class="form-control" [(ngModel)]="vehicleBasicData.firstRegistration"/>
+            </div>
+          </div>
         </div>
       </div>
     </form>
   </div>
   <div class="modal-footer">
     <button routerLink="">Abbrechen</button>
-    <button routerLink="../vehicleCondition">Nächste Seite</button>
+    <button routerLink="../vehicleTechnicalData">Nächste Seite</button>
   </div>
 </div>
 

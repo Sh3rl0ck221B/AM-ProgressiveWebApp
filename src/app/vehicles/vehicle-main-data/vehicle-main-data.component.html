@@ -3,31 +3,31 @@
     {{vehicle.vehicleConditionData.mileage}}
   </div>
   <div class="col p-3 border-bottom">
-    firstRegistration
+    {{vehicle.vehicleBasicData.firstRegistration}}
   </div>
   <div class="col p-3 border-bottom">
-    vehicle.powerInKWkwW (vehicle.powerInPSPS)
+    {{vehicle.vehicleTechnicalData.power}}
   </div>
 </div>
 <div class="row">
   <div class="col p-3 border-bottom">
-    vehicle.typeOfFuel
+    {{vehicle.vehicleTechnicalData.typeOfFuel}}
   </div>
   <div class="col p-3 border-bottom">
     {{vehicle.vehicleConditionData.vehicleOwner}}
   </div>
   <div class="col p-3 border-bottom">
-    vehicle.gearType
+    {{vehicle.vehicleTechnicalData.gearType}}
   </div>
 </div>
 <div class="row">
   <div class="col p-3 border-bottom">
-    TÜV vehicle.nextTechnicalExamination
+    {{vehicle.vehicleConditionData.nextTechnicalExamination}}
   </div>
   <div class="col p-3 border-bottom">
-    vehicle.consumptionPerHundredKilometer l/100km
+    {{vehicle.vehicleTechnicalData}} l/100km
   </div>
   <div class="col p-3 border-bottom">
-    vehicle.environmentalBadge
+    {{vehicle.vehicleTechnicalData.environmentalBadge}}
   </div>
 </div>

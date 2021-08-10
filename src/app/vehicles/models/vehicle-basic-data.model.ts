@@ -3,7 +3,16 @@ export class VehicleBasicData {
   private _model: string;
   private _price: number;
   private _yearOfManufacture: number;
+  private _firstRegistration: string;
 
+
+  get firstRegistration(): string {
+    return this._firstRegistration;
+  }
+
+  set firstRegistration(value: string) {
+    this._firstRegistration = value;
+  }
 
   get manufacturers(): string {
     return this._manufacturer;
